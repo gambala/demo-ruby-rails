@@ -69,7 +69,7 @@ Rails.application.configure do
 
   # Use a real queuing backend for Active Job (and separate queues per environment).
   # config.active_job.queue_adapter = :resque
-  # config.active_job.queue_name_prefix = "gambala_new_production"
+  # config.active_job.queue_name_prefix = "academy_production"
 
   config.action_mailer.perform_caching = false
 
@@ -89,7 +89,7 @@ Rails.application.configure do
 
   # Enable DNS rebinding protection and other `Host` header attacks.
   config.hosts = [
-    "new.gambala.pro",
+    "academy.gambala.pro",
     "localhost",
     # /.*\.example\.com/ # Allow requests from subdomains like `www.example.com`
   ]
