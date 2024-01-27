@@ -8,6 +8,9 @@ image: gambala/academy
 servers:
   - <%= ENV["MAIN_SERVER_IP"] %>
 
+labels:
+  traefik.http.routers.academy-web.rule: Host(`academy.gambala.pro`)
+
 # Credentials for your image host.
 registry:
   # Specify the registry server, if you're not using Docker Hub
