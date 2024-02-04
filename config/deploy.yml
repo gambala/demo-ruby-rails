@@ -1,33 +1,35 @@
-# Name of your application. Used to uniquely configure containers.
 service: academy
-
-# Name of the container image.
 image: gambala/academy
-
-# Deploy to these servers.
 servers:
   - <%= ENV["MAIN_SERVER_IP"] %>
-
 labels:
   traefik.http.routers.academy-web.rule: Host(`academy.gambala.pro`)
-
-# Credentials for your image host.
 registry:
   # Specify the registry server, if you're not using Docker Hub
   server: ghcr.io
   username: gambala
-
-  # Always use an access token rather than real password when possible.
   password:
     - KAMAL_REGISTRY_PASSWORD
-# Inject ENV variables into containers (secrets come from .env).
-# Remember to run `kamal env push` after making changes!
 env:
   secret:
     - RAILS_MASTER_KEY
-#   clear:
-#     DB_HOST: 192.168.0.2
-
+    - DB_HOST
+    - DB_PORT
+    - POSTGRES_DB
+    - POSTGRES_USER
+    - POSTGRES_PASSWORD
+accessories:
+  db:
+    image: postgres:15
+    host: <%= ENV["DB_HOST"] %>
+    port: <%= ENV["DB_PORT"] %>
+    env:
+      secret:
+        - POSTGRES_DB
+        - POSTGRES_USER
+        - POSTGRES_PASSWORD
+    directories:
+      - data:/var/lib/postgresql/data
 # Use a different ssh user than root
 # ssh:
 #   user: deploy

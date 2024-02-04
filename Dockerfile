@@ -19,7 +19,7 @@ FROM base as build
 
 # Install packages needed to build gems
 RUN apt-get update -qq && \
-    apt-get install --no-install-recommends -y build-essential git libvips curl unzip pkg-config
+    apt-get install --no-install-recommends -y build-essential git libpq-dev libvips curl unzip pkg-config
 
 # Install bun
 ENV BUN_INSTALL=/usr/local/bun
@@ -52,7 +52,7 @@ FROM base
 
 # Install packages needed for deployment
 RUN apt-get update -qq && \
-    apt-get install --no-install-recommends -y curl libsqlite3-0 libvips && \
+    apt-get install --no-install-recommends -y curl libpq-dev libvips && \
     rm -rf /var/lib/apt/lists /var/cache/apt/archives
 
 # Copy built artifacts: gems, application
