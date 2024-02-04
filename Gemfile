@@ -26,6 +26,8 @@ gem "tailwindcss-rails"
 # Use Redis adapter to run Action Cable in production
 gem "redis", ">= 4.0.1"
 
+gem "rails_performance"
+
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 
@@ -55,12 +57,13 @@ group :development, :test do
 end
 
 group :development do
-  gem "rails_live_reload"
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
 
-  # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
-  # gem "rack-mini-profiler"
+  gem "rails_live_reload"
+  gem "memory_profiler" # rack-mini-profiler dependency
+  gem "rack-mini-profiler"
+  gem "stackprof" # rack-mini-profiler dependency
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  mount RailsPerformance::Engine , at: '/rails/performance' , as: 'rails_performance'
+
   resources :lessons
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
