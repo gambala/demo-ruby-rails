@@ -4,5 +4,6 @@
 options:
   compose: true
   jemalloc: true
+  parallel: true
   redis: true
   yjit: true
