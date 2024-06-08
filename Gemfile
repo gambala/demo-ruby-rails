@@ -28,6 +28,8 @@ gem "redis", ">= 4.0.1"
 
 gem "rails_performance"
 
+gem "kamal", require: false
+
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 
@@ -76,3 +78,5 @@ group :test do
 end
 
 gem "jsbundling-rails", "~> 1.3"
+
+gem "dockerfile-rails", ">= 1.6", :group => :development
