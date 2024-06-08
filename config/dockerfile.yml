@@ -3,4 +3,5 @@
 ---
 options:
   compose: true
+  jemalloc: true
   redis: true
