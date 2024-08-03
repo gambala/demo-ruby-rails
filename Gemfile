@@ -27,6 +27,8 @@ gem "tailwindcss-rails"
 gem "redis", ">= 4.0.1"
 
 gem "rails_performance"
+gem "xrb-rails"
+gem "slim"
 
 gem "kamal", require: false
 
