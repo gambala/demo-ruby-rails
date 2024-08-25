@@ -20,6 +20,8 @@ env:
     - POSTGRES_PASSWORD
     - REDIS_HOST
     - REDIS_PORT
+    - WEB_CONCURRENCY
+    - RAILS_MAX_THREADS
 accessories:
   db:
     image: postgres:15
