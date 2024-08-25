@@ -16,7 +16,7 @@ services:
       - DATABASE_URL=postgres://root:password@postgres-db/
       - DB_HOST=postgres-db
       - DB_PORT=5432
-      - POSTGRES_DB=academy_production
+      - POSTGRES_DB=demo_ruby_rails_production
       - POSTGRES_USER=root
       - POSTGRES_PASSWORD=password
     depends_on:
