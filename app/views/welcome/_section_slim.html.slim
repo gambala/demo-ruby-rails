@@ -1,17 +1,16 @@
-- 10.times do
-  .flex.flex-col.md:flex-row.items-center
-    / Profile Section
-    .md:w-1/3.flex.flex-col.items-center.md:items-start.text-center.md:text-left
-      img.w-24.h-24.rounded-full.mb-4[src="/static/avatar.jpg" alt="Vitalii Avatar"]
-      h1.text-xl.font-bold = full_name
-      p.text-gray-400 = description
+.flex.flex-col.md:flex-row.items-center
+  / Profile Section
+  .md:w-1/3.flex.flex-col.items-center.md:items-start.text-center.md:text-left
+    img.w-24.h-24.rounded-full.mb-4[src="/static/avatar.jpg" alt="Vitalii Avatar"]
+    h1.text-xl.font-bold = full_name
+    p.text-gray-400 = description
 
-    / Main Content Section
-    .md:w-2/3.mt-6.md:mt-0
-      .aspect-w-16.aspect-h-9.border.border-pink-300.rounded-lg.overflow-hidden.shadow-sm
-        / Replace with image or video in the future
-        img.object-cover[src="/static/screen.jpg" alt="New video cover"]
-      h2.text-lg.font-semibold.mt-3.flex.items-center
-        |  New video!
-        svg.w-6.h-6.ml-2[fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"]
-          path[stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"]
+  / Main Content Section
+  .md:w-2/3.mt-6.md:mt-0
+    .aspect-w-16.aspect-h-9.border.border-pink-300.rounded-lg.overflow-hidden.shadow-sm
+      / Replace with image or video in the future
+      img.object-cover[src="/static/screen.jpg" alt="New video cover"]
+    h2.text-lg.font-semibold.mt-3.flex.items-center
+      |  New video!
+      svg.w-6.h-6.ml-2[fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"]
+        path[stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"]

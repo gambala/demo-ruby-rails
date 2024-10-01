@@ -1,7 +1,1 @@
-<% template = "slim" %>
-
-<% benchmark do %>
-  <% 500.times do %>
-    <%= render "section_#{template}", full_name: "Vitalii Emeliantsev", description: "Short text about me or my tagline" %>
-  <% end %>
-<% end %>
+<%= render "section_erb", full_name: "Vitalii Emeliantsev", description: "Short text about me or my tagline" %>
